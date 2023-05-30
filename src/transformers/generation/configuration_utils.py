@@ -224,6 +224,8 @@ class GenerationConfig(PushToHubMixin):
     def __init__(self, **kwargs):
         # Parameters that control the length of the output
         self.max_length = kwargs.pop("max_length", 20)
+        self.gumbel = kwargs.pop("gumbel", False)
+        self.gumbel_hard = kwargs.pop("gumbel", True)
         self.max_new_tokens = kwargs.pop("max_new_tokens", None)
         self.min_length = kwargs.pop("min_length", 0)
         self.min_new_tokens = kwargs.pop("min_new_tokens", None)
